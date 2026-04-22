@@ -27,7 +27,7 @@ app.post("/scrape", async (req, res) => {
     const text = $("body").text().replace(/\s+/g, " ").trim().slice(0, 4000);
     res.json({ success: true, content: `Titel: ${title}\nBeschreibung: ${metaDesc}\n\n${text}`, title });
   } catch (err) {
-    res.status(500).json({ error: "Fehler: " + err.message });
+    res.status(500).json({ error: "Fehler: " + err.message }); 
   }
 });
 
